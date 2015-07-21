@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Создать заметку</h1>
+
+<form method="POST">
+
+    {% csrf-field %}
+
+    <p>
+        <label>Заголовок</label><br>
+        <input type="text" name="title" placeholder="Заголовок">
+    </p>
+
+    <p>
+        <label>Заметка</label><br>
+        <textarea name="text"></textarea>
+    </p>
+
+    <input type="submit" value="Создать">
+
+</form>
+
+{% endblock %}

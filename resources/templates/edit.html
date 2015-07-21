@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Редактировать заметку</h1>
+
+<form method="POST">
+
+    {% csrf-field %}
+
+    <input type="hidden" name="id" value="{{note._id}}">
+
+    <p>
+        <label>Заголовок</label><br>
+        <input type="text" name="title" value="{{note.title}}">
+    </p>
+
+    <p>
+        <label>Заметка</label><br>
+        <textarea name="text">{{note.text}}</textarea>
+    </p>
+
+    <input type="submit" value="Сохранить">
+
+</form>
+
+{% endblock %}

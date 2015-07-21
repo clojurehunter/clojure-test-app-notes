@@ -1,20 +1,21 @@
-# notes
+# Notes 0.1
 
-FIXME
+Менеджер заметок - это веб-приложение на Clojure, для создания представления
+об устройстве Clojure веб-проекта и знакомства с базовыми библиотеками, такими
+как Monger, Ring, Compojure, Selmer.
 
-## Prerequisites
+## Для запуска необходимо:
 
-You will need [Leiningen][] 2.0.0 or above installed.
+ Установленный [Leiningen][] версии <= 2.0.0
+ Сервер MongoDB
 
 [leiningen]: https://github.com/technomancy/leiningen
 
-## Running
+## Запуск
 
-To start a web server for the application, run:
+Для запуска веб-приложения, перейдите в каталог с
+проектом и введите в консоль:
 
     lein ring server
 
-## License
-
-Copyright © 2015 FIXME
 # clojure-test-app-note-part1

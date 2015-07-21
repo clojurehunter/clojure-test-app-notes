@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Заметки</h1>
+
+{% if notes %}
+<ul>
+
+    {% for note in notes %}
+    <li>
+        <h4><a href="/note/{{note._id}}">{{note.title}}</a></h4>
+        <small>{{note.created|format-datetime}}</small>
+        <hr>
+        <a href="/edit/{{note._id}}">Редактировать</a> | <a href="/delete/{{note._id}}">Удалить</a>
+    </li>
+    {% endfor %}
+
+</ul>
+{% else %}
+<strong>Заметок еще нет</strong>
+{% endif %}
+
+{% endblock %}
